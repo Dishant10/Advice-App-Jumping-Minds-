@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXQ-K8-Mc1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Advices-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Advice_App_JumpingMinds_Assessment_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2fl-pz-P1E">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="2" indentationWidth="0.0" reuseIdentifier="cell" id="a31-hq-vvw">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a31-hq-vvw" id="Jgi-Fd-ErZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2fl-pz-P1E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6SX-v6-7AC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2fl-pz-P1E" secondAttribute="bottom" id="TXH-QT-Jlj"/>
+                            <constraint firstItem="2fl-pz-P1E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vnz-gE-SJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fl-pz-P1E" secondAttribute="trailing" id="vx0-gV-4zm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Table" id="Prj-dy-hWo">
+                        <imageReference key="selectedImage" image="network" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Advices" id="uc7-If-bEI">
+                        <barButtonItem key="rightBarButtonItem" title="Random" id="gVc-64-OWA">
+                            <imageReference key="image" image="chevron.right" catalog="system" symbolScale="large"/>
+                            <connections>
+                                <segue destination="eWC-ON-kmG" kind="show" id="c1A-BZ-rsc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="randomButton" destination="gVc-64-OWA" id="0ub-Yj-cjo"/>
+                        <outlet property="tableView" destination="2fl-pz-P1E" id="5nU-tT-0Pc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="-141"/>
+        </scene>
+        <!--Random View Controller-->
+        <scene sceneID="wRe-iK-qYA">
+            <objects>
+                <viewController id="eWC-ON-kmG" customClass="RandomViewController" customModule="Advice_App_JumpingMinds_Assessment_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BCF-q1-42P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="7H7-vP-v7s">
+                                <rect key="frame" x="20" y="258" width="374" height="584"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XZz-Yz-9dQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                        <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="370" id="FMH-EF-hlA"/>
+                                            <constraint firstAttribute="height" constant="200" id="hSL-4Q-ZGy"/>
+                                        </constraints>
+                                        <string key="text">Random Advices. Click the Random Button to generate an  advice. It uses an API to fetch an advice and every time the button is pressed it genertes a new advice.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quN-bh-N2o">
+                                        <rect key="frame" x="122" y="534" width="130" height="50"/>
+                                        <color key="backgroundColor" white="0.26575786564625853" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3d7-VA-trO"/>
+                                            <constraint firstAttribute="width" constant="130" id="Agz-HO-q8p"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Random">
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="randomButton:" destination="eWC-ON-kmG" eventType="touchUpInside" id="ZGU-AY-9MO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XZz-Yz-9dQ" firstAttribute="leading" secondItem="7H7-vP-v7s" secondAttribute="leadingMargin" id="0SE-h4-611"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uWA-Hq-Ctj"/>
+                        <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7H7-vP-v7s" firstAttribute="top" secondItem="uWA-Hq-Ctj" secondAttribute="top" constant="118" id="4vv-wX-cdl"/>
+                            <constraint firstItem="7H7-vP-v7s" firstAttribute="leading" secondItem="uWA-Hq-Ctj" secondAttribute="leading" constant="20" id="Xd3-Cb-EfH"/>
+                            <constraint firstItem="uWA-Hq-Ctj" firstAttribute="trailing" secondItem="7H7-vP-v7s" secondAttribute="trailing" constant="20" id="gTf-aW-ACG"/>
+                            <constraint firstItem="uWA-Hq-Ctj" firstAttribute="bottom" secondItem="7H7-vP-v7s" secondAttribute="bottom" constant="20" id="yb1-Za-dYS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1xv-0B-Ctn"/>
+                    <connections>
+                        <outlet property="textLabel" destination="XZz-Yz-9dQ" id="H7J-jO-6xF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oef-Oa-4FV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1988.4057971014495" y="382.36607142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sq7-TS-Paz">
+            <objects>
+                <navigationController id="SXQ-K8-Mc1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="a7L-89-ciu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Kbz-BR-gal"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPT-j1-XGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-861" y="679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="network" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
